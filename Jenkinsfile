@@ -17,9 +17,9 @@ pipeline {
                 sh 'mvn clean install'
             }
         }
-        stage('Run Application') {
+        //stage('Run Application') {
             // write your logic here
-        }
+        //}
         stage('Test') {
             steps {
                 sh 'mvn test'
