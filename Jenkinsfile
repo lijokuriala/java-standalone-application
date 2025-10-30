@@ -9,7 +9,10 @@ pipeline {
     stages {
         stage('Checkout') {
             steps{
-            git 'https://github.com/lijokuriala/java-standalone-application.git'
+            git (
+                url: 'https://github.com/lijokuriala/java-standalone-application.git',
+                branch: 'main'
+                 )
             }
         }
         stage('Build') {
