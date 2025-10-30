@@ -1,10 +1,10 @@
 pipeline {
     agent any
 
-    tools {
-        jdk 'jdk1.8.0_202'
-        maven 'Maven3'
-    }
+   // tools {
+      //  jdk 'jdk1.8.0_202'
+      //  maven 'Maven3'
+   // }
 
     stages {
         stage('Checkout') {
