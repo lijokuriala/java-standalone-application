@@ -8,16 +8,22 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            // write your logic here
+            steps{
+            git 'https://github.com/lijokuriala/java-standalone-application.git'
+            }
         }
         stage('Build') {
-            // write your logic here
+            steps {
+                sh 'mvn clean install'
+            }
         }
         stage('Run Application') {
             // write your logic here
         }
         stage('Test') {
-            // write your logic here
+            steps {
+                sh 'mvn test'
+            }            
             post {
                 always {
                     junit 'target/surefire-reports/*.xml'
