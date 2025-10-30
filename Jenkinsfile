@@ -17,7 +17,7 @@ pipeline {
         }
         stage('Build') {
             steps {
-                sh 'mvn clean install'
+                mvn clean install
             }
         }
         //stage('Run Application') {
@@ -25,7 +25,7 @@ pipeline {
         //}
         stage('Test') {
             steps {
-                sh 'mvn test'
+                mvn test
             }            
             post {
                 always {
